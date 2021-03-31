@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
@@ -9,28 +10,59 @@ int main ()
     float a;
     float b;
     float c;
-    float h;
     float objetosc_prostopadloscianu;
+    float h;
     float objetosc_ostroslupa_prawidlowego_czworokatnego;
 
 
-    printf ("Podaj dlugosc boku a - ");
+     do
+    {
+    printf ("Nacisnij 1 jesli chcesz obliczyc obietosc prostopadloscianu \nNacisnij 2 jesli chcesz obliczyc objetosc ostoslupa \nInna liczba = brak opcji\n");
+
+    fflush(stdin);
+    scanf ("%d", &liczba);
+
+    switch(liczba)
+
+{
+
+case 1:
+    printf ("\nPodaj dlugosc boku a\n");
     scanf ("%f", &a);
 
-    printf ("Podaj dlugosc boku b - ");
+    printf ("\nPodaj dlugosc boku b\n");
     scanf ("%f", &b);
 
-    printf ("Podaj dlugosc boku c - ");
+    printf ("\nPodaj dlugosc boku c\n");
     scanf ("%f", &c);
-    printf ("Podaj wysokosc ostroslupa h - ");
-    scanf ("%f", &h);
+
 
     objetosc_prostopadloscianu = a * b* c;
+
+
+
+    printf("\nObjetosc prostopadloscianu wynosi:%.2f\n\n", objetosc_prostopadloscianu);
+break ;
+
+
+
+case 2:
+
+    printf ("\nPodaj dlugosc boku a\n");
+    scanf ("%f", &a);
+
+    printf ("\nPodaj wysokosc ostroslupa h\n");
+    scanf ("%f", &h);
+
     objetosc_ostroslupa_prawidlowego_czworokatnego = (a * a * h) / 3 ;
-
-    printf("Objetosc ostroslupa wynosi:%.2f\n", objetosc_ostroslupa_prawidlowego_czworokatnego);
-    printf("Objetosc prostopadloscianu wynosi:%.2f", objetosc_prostopadloscianu);
+    printf("\nObjetosc ostroslupa wynosi:%.2f\n\n", objetosc_ostroslupa_prawidlowego_czworokatnego);
 
 
-     return 0;
+}
+
+    }while(liczba > 0);
+
+
+
+    return 0;
 }
